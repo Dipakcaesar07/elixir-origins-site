@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elixir Origins | Global Origin Coffee for B2B in India</title>
+    <meta name="description" content="Curated specialty coffee lots from Vietnam, Colombia, Ethiopia, Indonesia, Brazil & Peru. B2B supply with GST invoicing, fast sampling, and pan-India delivery.">
+    <meta name="keywords" content="specialty coffee, B2B coffee India, Vietnam coffee, Colombia coffee, Ethiopia coffee, green coffee beans, coffee supplier India">
+    <link rel="canonical" href="https://capheelixir.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Elixir Origins | Global Origin Coffee for B2B in India">
+    <meta property="og:description" content="Curated specialty coffee lots from Vietnam, Colombia, Ethiopia & Indonesia for Indian businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://capheelixir.com/">
+    <meta property="og:image" content="https://capheelixir.com/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #FAF7F2;
+            --cream-dark: #F5F0E8;
+            --brown-dark: #2D2A26;
+            --brown-medium: #5C534A;
+            --green-accent: #4A7C59;
+            --green-light: #5D9B6B;
+            --gold: #C9A962;
+            --card-bg: #F8F5F0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--brown-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--cream);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--brown-dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            font-size: 0.75rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            color: var(--brown-medium);
+            margin-left: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--brown-medium);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--brown-dark);
+        }
+
+        .btn-primary {
+            background: var(--green-accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--green-light);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--brown-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid var(--brown-medium);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--brown-dark);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23C9A96220"/></svg>');
+            background-size: 200px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--brown-dark);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--brown-medium);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-badge p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--brown-medium);
+        }
+
+        .hero-badge strong {
+            color: var(--green-accent);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--cream-dark);
+            padding: 0.5rem 2rem;
+            font-size: 0.8rem;
+            color: var(--brown-medium);
+            position: fixed;
+            top: 60px;
+            width: 100%;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .top-bar span {
+            margin-right: 1.5rem;
+        }
+
+        /* Pillars Section */
+        .pillars {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .pillars-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .pillar-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--brown-dark);
+        }
+
+        .pillar-card p {
+            color: var(--brown-medium);
+            font-size: 0.95rem;
+        }
+
+        /* Origins Section */
+        .origins {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .section-header {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+        }
+
+        .section-header a {
+            color: var(--brown-medium);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .origins-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .origin-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .origin-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .origin-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--green-accent) 0%, var(--gold) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .origin-card.vietnam .origin-image { background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); }
+        .origin-card.colombia .origin-image { background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%); }
+        .origin-card.ethiopia .origin-image { background: linear-gradient(135deg, #228B22 0%, #2E8B57 100%); }
+        .origin-card.indonesia .origin-image { background: linear-gradient(135deg, #4A4A4A 0%, #696969 100%); }
+        .origin-card.brazil .origin-image { background: linear-gradient(135deg, #009739 0%, #FEDF00 100%); }
+        .origin-card.peru .origin-image { background: linear-gradient(135deg, #D91023 0%, #FFFFFF 100%); }
+
+        .origin-content {
+            padding: 1.5rem;
+        }
+
+        .origin-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .origin-content p {
+            color: var(--brown-medium);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .origin-content a {
+            color: var(--brown-dark);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Formats Section */
+        .formats {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .formats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .format-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .format-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+        }
+
+        .format-card p {
+            color: var(--brown-medium);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+        }
+
+        /* Value Props Bar */
+        .value-props {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin: 4rem auto;
+            max-width: 1200px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .value-props-list {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .value-props-list span {
+            color: var(--brown-medium);
+            font-size: 0.95rem;
+        }
+
+        .value-props-list span::before {
+            content: '•';
+            color: var(--green-accent);
+            margin-right: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .contact-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info > p {
+            color: var(--brown-medium);
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .contact-method h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-method a {
+            color: var(--green-accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .contact-method p {
+            color: var(--brown-medium);
+            font-size: 0.85rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form > p {
+            color: var(--brown-medium);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--brown-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #E0DCD5;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            background: white;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--green-accent);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .contact-form .btn-primary {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brown-dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand > p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand .address {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 1000;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .origins-grid,
+            .formats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .origins-grid,
+            .formats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .value-props {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Elixir Origins <span>by Maison Des Elixir</span></a>
+        <div class="nav-links">
+            <a href="#origins">Origins</a>
+            <a href="#formats">Formats</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="btn-primary">Request B2B Sample Kit</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <h1>Curated Global Origins, Crafted for India.</h1>
+                <p>Exquisite specialty lots from Vietnam, Colombia, Ethiopia, Indonesia, Brazil & Peru — six origins, infinite possibilities.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Request B2B Sample Kit</a>
+                    <a href="#origins" class="btn-secondary">View Origins</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div style="width: 100%; height: 400px; background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 8rem;">☕</span>
+                </div>
+                <div class="hero-badge">
+                    <p><strong>Pan-India Supply</strong> • GST Invoicing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section class="pillars">
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <h3>Coffee</h3>
+                <p>Curated origins and lots — terroir × processing.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Culture</h3>
+                <p>Species education and craft stories.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Couture</h3>
+                <p>Formats that fit your service and brand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origins Section -->
+    <section class="origins" id="origins">
+        <div class="section-header">
+            <h2>Origins</h2>
+            <a href="#contact">Explore all →</a>
+        </div>
+        <div class="origins-grid">
+            <div class="origin-card vietnam">
+                <div class="origin-image">🇻🇳</div>
+                <div class="origin-content">
+                    <h3>Vietnam</h3>
+                    <p>Velvety cocoa, toasted spice</p>
+                    <a href="#contact">Request Samples →</a>
+                </div>
+            </div>
+            <div class="origin-card colombia">
+                <div class="origin-image">🇨🇴</div>
+                <div class="origin-content">
+                    <h3>Colombia</h3>
+                    <p>Citrus-caramel balance</p>
+                    <a href="#contact">Request Samples →</a>
+                </div>
+            </div>
+            <div class="origin-card ethiopia">
+                <div class="origin-image">🇪🇹</div>
+                <div class="origin-content">
+                    <h3>Ethiopia</h3>
+                    <p>Floral, bergamot, stone fruit</p>
+                    <a href="#contact">Request Samples →</a>
+                </div>
+            </div>
+            <div class="origin-card indonesia">
+                <div class="origin-image">🇮🇩</div>
+                <div class="origin-content">
+                    <h3>Indonesia</h3>
+                    <p>Earthy, cocoa, syrupy body</p>
+                    <a href="#contact">Request Samples →</a>
+                </div>
+            </div>
+            <div class="origin-card brazil">
+                <div class="origin-image">🇧🇷</div>
+                <div class="origin-content">
+                    <h3>Brazil</h3>
+                    <p>Nutty, chocolate, low acidity</p>
+                    <a href="#contact">Request Samples →</a>
+                </div>
+            </div>
+            <div class="origin-card peru">
+                <div class="origin-image">🇵🇪</div>
+                <div class="origin-content">
+                    <h3>Peru</h3>
+                    <p>Bright, fruity, clean finish</p>
+                    <a href="#contact">Request Samples →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formats Section -->
+    <section class="formats" id="formats">
+        <div class="section-header">
+            <h2>Formats</h2>
+            <a href="#contact">Compare all →</a>
+        </div>
+        <div class="formats-grid">
+            <div class="format-card">
+                <h3>Drip Bags</h3>
+                <p>Single-serve specialty for hotels & corporate hampers; nitrogen-flushed.</p>
+                <a href="#contact" class="btn-secondary">Request Samples</a>
+            </div>
+            <div class="format-card">
+                <h3>Whole Beans</h3>
+                <p>Roast profiles tailored to espresso or filter; 1kg / 5kg / 30kg.</p>
+                <a href="#contact" class="btn-secondary">Request Samples</a>
+            </div>
+            <div class="format-card">
+                <h3>Ground</h3>
+                <p>Dialed grind sizes by brew method; sealed freshness.</p>
+                <a href="#contact" class="btn-secondary">Request Samples</a>
+            </div>
+            <div class="format-card">
+                <h3>High-Quality Instant</h3>
+                <p>Spray / freeze-dried options; cold-soluble; micro-ground blends.</p>
+                <a href="#contact" class="btn-secondary">Request Samples</a>
+            </div>
+        </div>
+
+        <!-- Value Props -->
+        <div class="value-props">
+            <div class="value-props-list">
+                <span>Pan-India supply</span>
+                <span>GST invoicing</span>
+                <span>Fast sampling</span>
+                <span>Local support</span>
+            </div>
+            <a href="#contact" class="btn-primary">Talk to Sourcing</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact / Request Samples</h2>
+                <p>We serve PAN-India with 24-hour availability. Connect with our Sales and Sourcing Experts for immediate assistance.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone / WhatsApp</h4>
+                            <a href="tel:+918920694407">+91-8920694407</a>
+                            <p>24 Hours availability</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:Sales@capheelixir.com">Sales@capheelixir.com</a>
+                            <p>We respond within 24-48 hours</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">🏢</div>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p style="color: var(--brown-dark);">
+                                Caphe Elixir Private Limited<br>
+                                Block C-1844, First Floor<br>
+                                New Vyapar Kendra, Palam Vihar<br>
+                                Gurgaon, Haryana 122017
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Request B2B Sample Kit</h3>
+                <p>Get tailored samples for your specific use case. We'll respond within 24-48 hours.</p>
+
+                <form action="https://formspree.io/f/mrelbakj" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interested In</label>
+                        <select id="interest" name="interest">
+                            <option value="">Select an option</option>
+                            <option value="vietnam">Vietnam Origin</option>
+                            <option value="colombia">Colombia Origin</option>
+                            <option value="ethiopia">Ethiopia Origin</option>
+                            <option value="indonesia">Indonesia Origin</option>
+                            <option value="brazil">Brazil Origin</option>
+                            <option value="peru">Peru Origin</option>
+                            <option value="drip-bags">Drip Bags</option>
+                            <option value="whole-beans">Whole Beans</option>
+                            <option value="ground">Ground Coffee</option>
+                            <option value="instant">High-Quality Instant</option>
+                            <option value="multiple">Multiple Products</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your requirements</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Volume, use case, preferred origins..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Sample Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Elixir Origins</h3>
+                <p>Global origins. Indian momentum.</p>
+                <div class="address">
+                    GST invoicing • Standard trade terms • Typical lead times communicated per lot • FSSAI labeling support for white/private label.<br><br>
+                    <strong>Caphe Elixir Private Limited</strong><br>
+                    GSTIN: 06AALCC9937A1ZL<br>
+                    Block C-1844, First Floor<br>
+                    New Vyapar Kendra, Palam Vihar<br>
+                    Gurgaon, Haryana 122017
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>For Businesses</h4>
+                <ul>
+                    <li><a href="#contact">Request Samples</a></li>
+                    <li><a href="#contact">Get India Price List</a></li>
+                    <li><a href="#formats">Compare Formats</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Maison Des Elixir</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Caphe Elixir Private Limited • All rights reserved.
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918920694407?text=Hi%2C%20I%27m%20interested%20in%20your%20B2B%20coffee%20samples" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        💬
+    </a>
+
+    <script>
+        // Simple scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.pillar-card, .origin-card, .format-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
