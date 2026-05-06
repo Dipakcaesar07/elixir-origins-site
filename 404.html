@@ -1,2 +1,72 @@
-404.html
-Add branded 404 page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found · Maison Des Élixirs</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%235C0F1E'/><text x='50' y='72' font-family='Georgia' font-size='70' font-style='italic' font-weight='500' text-anchor='middle' fill='%23C9A048'>M</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Cinzel:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #240208;
+            color: #F7EFDD;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        .container { max-width: 480px; }
+        .mono {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 6rem;
+            color: #C9A048;
+            opacity: 0.4;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 2rem;
+            color: #F7EFDD;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            font-size: 1.05rem;
+            color: rgba(247, 239, 221, 0.55);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+        a {
+            display: inline-block;
+            border: 1px solid #C9A048;
+            color: #C9A048;
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.85rem 2.5rem;
+            transition: all 0.3s;
+        }
+        a:hover {
+            background: #C9A048;
+            color: #240208;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mono">M</div>
+        <h1>This Page Has Wandered</h1>
+        <p>The composition you seek is not in our collection. Perhaps the Maison can guide you home.</p>
+        <a href="/">Return to the Maison</a>
+    </div>
+</body>
+</html>
