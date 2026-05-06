@@ -1,1 +1,10 @@
-cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Elixir\ WORK/10_Website/robots.txt | pbcopy
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.capheelixir.com/sitemap.xml
