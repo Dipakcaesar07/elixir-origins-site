@@ -6,7 +6,7 @@
     <title>Maison Des Élixirs · A Couture House for Coffee</title>
     <meta name="description" content="Maison Des Élixirs — a couture house for coffee, born in Saigon. Ten global origins curated as artefacts of taste. Now serving India, Vietnam &amp; Singapore.">
     <meta name="keywords" content="Maison Des Elixirs, luxury coffee, specialty coffee Asia, artisan coffee, drip bag coffee, single origin coffee, Vietnam coffee, Saigon coffee, luxury coffee India, specialty coffee Singapore, coffee gifting Asia">
-    <link rel="canonical" href="https://capheelixir.com/">
+    <link rel="canonical" href="https://www.capheelixir.com/">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="_PtS_Zl8gwOYXjMka8IA9YXvrfYw5qU7rxu3h6KYFi8" />
     <meta name="author" content="Caphe Elixir Private Limited">
@@ -15,8 +15,8 @@
     <meta property="og:title" content="Maison Des Élixirs · A Couture House for Coffee">
     <meta property="og:description" content="Where coffee meets couture. Ten origins curated as artefacts of taste. Née à Saigon, now across Asia.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://capheelixir.com/">
-    <meta property="og:image" content="https://capheelixir.com/og-image.jpg">
+    <meta property="og:url" content="https://www.capheelixir.com/">
+    <meta property="og:image" content="https://www.capheelixir.com/og-image.jpg">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Maison Des Élixirs">
 
@@ -32,7 +32,7 @@
         "@type": "Organization",
         "name": "Maison Des Élixirs",
         "alternateName": ["Caphe Elixir", "Elixir Origins"],
-        "url": "https://capheelixir.com",
+        "url": "https://www.capheelixir.com",
         "description": "A couture house for coffee, born in Saigon. Ten global origins curated as artefacts of taste, ceremony and craft. Now across India, Vietnam and Singapore.",
         "foundingDate": "2025",
         "address": {
@@ -59,8 +59,8 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Maison Des Élixirs",
-        "image": "https://capheelixir.com/og-image.jpg",
-        "url": "https://capheelixir.com",
+        "image": "https://www.capheelixir.com/og-image.jpg",
+        "url": "https://www.capheelixir.com",
         "telephone": "+91-8920-694-407",
         "email": "Sales@capheelixir.com",
         "address": {
@@ -1395,6 +1395,197 @@
         }
 
         /* ─────────────────────────────────────────────
+           LA BOUTIQUE — WHATSAPP ORDER SECTION
+        ───────────────────────────────────────────── */
+        .boutique {
+            padding: 7rem 2.5rem;
+            background: var(--claret-deeper);
+            color: var(--ivory);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .boutique::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 30%, rgba(201,160,72,0.1) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 70%, rgba(201,160,72,0.06) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .boutique .section-head h2 { color: var(--ivory); }
+        .boutique .section-head h2 em { color: var(--gold-light); }
+        .boutique .section-head .section-sub { color: rgba(247, 239, 221, 0.6); }
+
+        .boutique-intro {
+            max-width: 680px;
+            margin: 0 auto 3.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .boutique-intro p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.05rem;
+            color: rgba(247, 239, 221, 0.65);
+            line-height: 1.75;
+        }
+
+        .boutique-grid {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .boutique-card {
+            background: rgba(247, 239, 221, 0.03);
+            border: 1px solid rgba(201, 160, 72, 0.2);
+            padding: 2.25rem 1.75rem 1.75rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s;
+        }
+
+        .boutique-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 14px; height: 14px;
+            border: 1px solid var(--gold);
+            border-right: none;
+            border-bottom: none;
+            transition: all 0.3s;
+        }
+
+        .boutique-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 14px; height: 14px;
+            border: 1px solid var(--gold);
+            border-left: none;
+            border-top: none;
+            transition: all 0.3s;
+        }
+
+        .boutique-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+        }
+
+        .boutique-card:hover::before { top: -4px; left: -4px; }
+        .boutique-card:hover::after  { bottom: -4px; right: -4px; }
+
+        .boutique-icon {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 2.5rem;
+            color: var(--gold);
+            opacity: 0.6;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .boutique-card h3 {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.35rem;
+            color: var(--gold-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .boutique-card .boutique-sub {
+            font-family: var(--display-caps);
+            font-size: 0.58rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold-warm);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .boutique-card p {
+            font-family: var(--serif);
+            font-size: 0.92rem;
+            color: rgba(247, 239, 221, 0.55);
+            font-style: italic;
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+            min-height: 48px;
+        }
+
+        .boutique-price {
+            font-family: var(--display-caps);
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            color: var(--gold-light);
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            font-family: var(--display-caps);
+            font-size: 0.62rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.75rem 1.75rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--gold);
+            color: var(--claret-deeper);
+        }
+
+        .btn-whatsapp svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .boutique-footer {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(201, 160, 72, 0.15);
+        }
+
+        .boutique-footer p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 0.95rem;
+            color: rgba(247, 239, 221, 0.5);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .boutique-footer .btn-whatsapp {
+            font-size: 0.68rem;
+            padding: 0.85rem 2.25rem;
+        }
+
+        /* ─────────────────────────────────────────────
            NOW IN INDIA
         ───────────────────────────────────────────── */
         .now-in-india {
@@ -2134,7 +2325,7 @@
         @media (max-width: 1024px) {
             .hero-inner, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
             .hero::after { left: 20px; right: 20px; }
-            .origins-grid, .formats-grid { grid-template-columns: repeat(2, 1fr); }
+            .origins-grid, .formats-grid, .boutique-grid { grid-template-columns: repeat(2, 1fr); }
             .india-grid { grid-template-columns: repeat(2, 1fr); }
             .pillars-grid, .species-grid { grid-template-columns: 1fr; }
             .atelier-grid {
@@ -2195,7 +2386,7 @@
             .crest-origins { grid-template-columns: repeat(2, 1fr); font-size: 0.52rem; }
 
             /* Grids — single column */
-            .origins-grid, .formats-grid, .india-grid { grid-template-columns: 1fr; }
+            .origins-grid, .formats-grid, .india-grid, .boutique-grid { grid-template-columns: 1fr; }
             .atelier-grid { grid-template-columns: 1fr; }
             .atelier-card.feature { aspect-ratio: 4 / 3; }
 
@@ -2216,11 +2407,15 @@
 
             /* Sections — tighter padding on mobile */
             .manifesto { padding: 4rem 1.5rem; }
-            .pillars, .origins, .species, .formats, .now-in-india { padding: 4rem 1.5rem; }
+            .pillars, .origins, .species, .formats, .boutique, .now-in-india { padding: 4rem 1.5rem; }
             .contact { padding: 4rem 1.5rem; }
 
             /* Disable parallax on mobile — causes jank on iOS */
             .hero { background-attachment: scroll; }
+
+            /* WhatsApp float — smaller and higher on mobile to avoid overlapping buttons */
+            .whatsapp-float { width: 48px; height: 48px; bottom: 1.25rem; right: 1rem; }
+            .whatsapp-float svg { width: 20px; height: 20px; }
 
             /* Reduce animation intensity on mobile */
             .reveal { transform: translateY(24px); }
@@ -2247,8 +2442,8 @@
     ═══════════════════════════════════════════════ -->
     <div class="announce-bar">
         <div class="announce-track">
-            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Now in India <span class="sep">◆</span> GST Invoicing · FSSAI Labelling · Pan-India Trade &nbsp;&nbsp;&nbsp;</span>
-            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Now in India <span class="sep">◆</span> GST Invoicing · FSSAI Labelling · Pan-India Trade &nbsp;&nbsp;&nbsp;</span>
+            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Née à Saigon · Now Across Asia &nbsp;&nbsp;&nbsp;</span>
+            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Née à Saigon · Now Across Asia &nbsp;&nbsp;&nbsp;</span>
         </div>
     </div>
 
@@ -2268,6 +2463,7 @@
             <a href="#origins">Origins</a>
             <a href="#species">Species</a>
             <a href="#formats">Formats</a>
+            <a href="#boutique">La Boutique</a>
             <a href="#presence">Where We Are</a>
             <a href="#contact" class="btn-primary">Request Samples</a>
         </div>
@@ -2650,6 +2846,114 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
+         LA BOUTIQUE — ORDER VIA WHATSAPP
+    ═══════════════════════════════════════════════ -->
+    <section class="boutique" id="boutique">
+        <div class="section-head">
+            <p class="eyebrow" style="color: var(--gold-light);">The Maison Boutique</p>
+            <h2>La <em>Boutique</em></h2>
+            <p class="section-sub">Select your composition. Place your order through our concierge. Every box dispatched within 48–72 hours.</p>
+        </div>
+
+        <div class="boutique-intro">
+            <p>Our concierge receives your order via WhatsApp, confirms availability and origin, and sends you a secure payment link. Once confirmed, your box is dispatched from Saigon or Gurgaon — whichever is nearest.</p>
+        </div>
+
+        <div class="boutique-grid reveal-stagger">
+            <div class="boutique-card">
+                <div class="boutique-icon">❦</div>
+                <h3>The Drip Bag Box</h3>
+                <span class="boutique-sub">Composition N° I · 10 sachets</span>
+                <p>Ten single-serve drip bags across five origins — Vietnam, Colombia, Ethiopia, Brazil and Indonesia. Nitrogen-sealed, 12g each. Ships from Gurgaon.</p>
+                <span class="boutique-price">₹990 / Box of 10</span>
+                <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20acquire%20The%20Drip%20Bag%20Box.%20Please%20share%20availability%20and%20payment%20details." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Acquire via WhatsApp
+                </a>
+            </div>
+
+            <div class="boutique-card">
+                <div class="boutique-icon">◈</div>
+                <h3>Single Origin Pouch</h3>
+                <span class="boutique-sub">Composition N° II · Whole Bean or Ground</span>
+                <p>Choose your origin and format — whole bean or ground for espresso, filter or French press. 250g or 500g pouches, roasted to order.</p>
+                <span class="boutique-price">From ₹799 / 250g Pouch</span>
+                <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20reserve%20a%20Single%20Origin%20Pouch.%20Please%20share%20available%20origins%20and%20payment%20details." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Reserve via WhatsApp
+                </a>
+            </div>
+
+            <div class="boutique-card">
+                <div class="boutique-icon">✦</div>
+                <h3>The Origin Cabinet</h3>
+                <span class="boutique-sub">Composition N° III · Gift Edition</span>
+                <p>Three origins in a keepsake box with tasting notes, brewing guide and a hand-written card. Designed for gifting — Diwali, birthdays, client appreciation.</p>
+                <span class="boutique-price">From ₹2,490 / Cabinet</span>
+                <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20acquire%20The%20Origin%20Cabinet.%20Please%20share%20options%20and%20payment%20details." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Acquire via WhatsApp
+                </a>
+            </div>
+
+            <div class="boutique-card">
+                <div class="boutique-icon">❖</div>
+                <h3>Premium Instant</h3>
+                <span class="boutique-sub">Composition N° IV · Collector's Tin</span>
+                <p>Freeze-dried micro-ground specialty, cold-soluble. 15 single-serve sachets in a reusable tin. For travel, the office, or when time is short.</p>
+                <span class="boutique-price">₹690 / Tin of 15</span>
+                <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20acquire%20the%20Premium%20Instant%20Tin.%20Please%20share%20options%20and%20payment%20details." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Acquire via WhatsApp
+                </a>
+            </div>
+
+            <div class="boutique-card">
+                <div class="boutique-icon">✧</div>
+                <h3>The Atelier Sample Kit</h3>
+                <span class="boutique-sub">For the Curious · 5 Origins</span>
+                <p>Five 30g sample pouches spanning our collection — from Vietnamese robusta to Ethiopian heirloom. The ideal first encounter with the Maison.</p>
+                <span class="boutique-price">₹590 / Sample Kit</span>
+                <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20request%20The%20Atelier%20Sample%20Kit.%20Please%20share%20details." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Request via WhatsApp
+                </a>
+            </div>
+
+            <div class="boutique-card">
+                <div class="boutique-icon">◆</div>
+                <h3>Corporate &amp; Bespoke</h3>
+                <span class="boutique-sub">Trade · Gifting · Private Label</span>
+                <p>Custom-branded gift boxes, bulk supply for hotels and cafés, or private-label commissions. MOQ 25 units for gifting, 10 kg for trade.</p>
+                <span class="boutique-price">By Arrangement</span>
+                <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20enquire%20about%20corporate%20gifting%20%2F%20trade%20supply.%20Please%20share%20options%20and%20terms." class="btn-whatsapp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Enquire via WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="boutique-footer">
+            <p>Your concierge confirms availability, sends a secure Razorpay payment link, and dispatches within 48–72 hours. Free delivery across India on orders above ₹1,500.</p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem 2.5rem;margin:1.5rem 0 1.75rem;font-family:var(--display-caps);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-warm);">
+                <span>Secure Payments</span>
+                <span style="opacity:0.3;">·</span>
+                <span>GST Invoice</span>
+                <span style="opacity:0.3;">·</span>
+                <span>FSSAI Compliant</span>
+                <span style="opacity:0.3;">·</span>
+                <span>48–72 hr Dispatch</span>
+                <span style="opacity:0.3;">·</span>
+                <span>WhatsApp Support</span>
+            </div>
+            <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20know%20more%20about%20your%20collections%20and%20ordering." class="btn-whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Speak to the Concierge
+            </a>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
          WHERE WE ARE — INTERNATIONAL PRESENCE
     ═══════════════════════════════════════════════ -->
     <section class="now-in-india" id="presence">
@@ -2798,6 +3102,7 @@
                     <li><a href="#origins">Origins</a></li>
                     <li><a href="#species">Species Guide</a></li>
                     <li><a href="#formats">Formats</a></li>
+                    <li><a href="#boutique">La Boutique</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -2816,8 +3121,8 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/918920694407?text=Hi%2C%20I%27m%20interested%20in%20Maison%20Des%20%C3%89lixirs%20samples" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-        <span style="position:relative;z-index:1;">✦</span>
+    <a href="https://wa.me/918920694407?text=Hello%20Maison%20Des%20%C3%89lixirs%20%E2%80%94%20I%E2%80%99d%20like%20to%20place%20an%20order%20or%20learn%20more%20about%20your%20collections." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Order via WhatsApp">
+        <svg style="position:relative;z-index:1;width:24px;height:24px;fill:currentColor;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
@@ -2890,3 +3195,4 @@
     </script>
 </body>
 </html>
+Add La Boutique + trust blocks + Codex refinements
