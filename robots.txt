@@ -1,2 +1,1 @@
 cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Elixir\ WORK/10_Website/robots.txt | pbcopy
-ix sitemap URL to www
