@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maison Des Élixirs · A Couture House for Coffee</title>
-    <meta name="description" content="Maison Des Élixirs — a couture house for coffee, born in Saigon. Ten global origins curated as artefacts of taste. Now serving India, Vietnam &amp; Singapore.">
+    <meta name="description" content="Maison Des Élixirs — a couture house for coffee. Conceived in Singapore, crafted in Vietnam. Ten global origins curated as artefacts of taste. Serving India, Vietnam &amp; Singapore.">
     <meta name="keywords" content="Maison Des Elixirs, luxury coffee, specialty coffee Asia, artisan coffee, drip bag coffee, single origin coffee, Vietnam coffee, Saigon coffee, luxury coffee India, specialty coffee Singapore, coffee gifting Asia">
     <link rel="canonical" href="https://www.capheelixir.com/">
     <meta name="robots" content="index, follow">
@@ -13,7 +13,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Maison Des Élixirs · A Couture House for Coffee">
-    <meta property="og:description" content="Where coffee meets couture. Ten origins curated as artefacts of taste. Née à Saigon, now across Asia.">
+    <meta property="og:description" content="Where coffee meets couture. Ten origins curated as artefacts of taste. Conceived in Singapore, crafted in Vietnam.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.capheelixir.com/">
     <meta property="og:image" content="https://www.capheelixir.com/og-image.jpg">
@@ -33,7 +33,7 @@
         "name": "Maison Des Élixirs",
         "alternateName": ["Caphe Elixir", "Elixir Origins"],
         "url": "https://www.capheelixir.com",
-        "description": "A couture house for coffee, born in Saigon. Ten global origins curated as artefacts of taste, ceremony and craft. Now across India, Vietnam and Singapore.",
+        "description": "A couture house for coffee, conceived in Singapore and crafted in Vietnam. Ten global origins curated as artefacts of taste, ceremony and craft. Now across India, Vietnam and Singapore.",
         "foundingDate": "2025",
         "address": {
             "@type": "PostalAddress",
@@ -77,8 +77,8 @@
     }
     </script>
 
-    <!-- Favicon — ornate M monogram -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%235C0F1E'/><text x='50' y='72' font-family='Georgia' font-size='70' font-style='italic' font-weight='500' text-anchor='middle' fill='%23C9A048'>M</text></svg>">
+    <!-- Favicon — phial wax seal -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Fonts: Cormorant Garamond (display serif), Cinzel (monogram caps), Inter (utility) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,10 +212,16 @@
         }
 
         .divider-mark {
-            font-family: var(--serif);
-            color: var(--gold);
-            font-size: 1.1rem;
-            letter-spacing: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .divider-mark img {
+            width: 48px;
+            height: auto;
+            opacity: 0.85;
+            filter: drop-shadow(0 1px 4px rgba(92, 15, 30, 0.2));
         }
 
         /* ─────────────────────────────────────────────
@@ -302,32 +308,28 @@
         .logo-mark {
             width: 44px;
             height: 44px;
-            border: 1px solid var(--gold);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            background: var(--claret-deeper);
+            background: none;
+            border: none;
         }
 
         .logo-mark::before,
         .logo-mark::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border: 1px solid var(--gold);
+            display: none;
         }
-        .logo-mark::before { top: -4px; left: -4px; border-right: none; border-bottom: none; }
-        .logo-mark::after  { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+
+        .logo-mark img {
+            width: 44px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+        }
 
         .logo-mark span {
-            font-family: var(--serif);
-            font-style: italic;
-            font-weight: 500;
-            font-size: 1.5rem;
-            color: var(--gold);
-            line-height: 1;
+            display: none;
         }
 
         .logo-word {
@@ -645,13 +647,16 @@
         .crest-corners::after  { bottom: -6px; left: -6px; border-right: none; border-top: none; }
 
         .crest-mono {
-            font-family: var(--serif);
-            font-style: italic;
-            font-weight: 500;
-            font-size: 4.5rem;
-            color: var(--gold);
+            font-size: 0;
+            color: transparent;
             line-height: 1;
             margin-bottom: 0.5rem;
+        }
+
+        .crest-mono img {
+            width: 120px;
+            height: auto;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.35));
         }
 
         .crest-est {
@@ -1016,10 +1021,13 @@
         .origin-card {
             background: var(--ivory-card);
             border: 1px solid rgba(201, 160, 72, 0.25);
-            padding: 1.5rem 1.5rem 1.75rem;
+            padding: 0;
             position: relative;
             transition: transform 0.4s, box-shadow 0.4s;
             cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .origin-card::after {
@@ -1028,6 +1036,7 @@
             inset: 6px;
             border: 1px dashed rgba(201, 160, 72, 0.35);
             pointer-events: none;
+            z-index: 4;
         }
 
         .origin-card:hover {
@@ -1037,13 +1046,18 @@
 
         .origin-stamp {
             width: 100%;
-            height: 150px;
+            height: 200px;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0;
             overflow: hidden;
+        }
+
+        /* Subtle vignette on photo stamps */
+        .origin-card.has-pattern .origin-stamp {
+            box-shadow: inset 0 0 30px rgba(26,4,8,0.2);
         }
 
         /* Stamp number tag */
@@ -1062,16 +1076,67 @@
             z-index: 2;
         }
 
-        .origin-card.vietnam   .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #8B3A1F 0%, #4A1A0A 100%); }
-        .origin-card.colombia  .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #B8860B 0%, #5C3F00 100%); }
-        .origin-card.ethiopia  .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #2E7D32 0%, #0D3D10 100%); }
-        .origin-card.indonesia .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #5C4A4A 0%, #1F1518 100%); }
-        .origin-card.brazil    .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #1B7A1B 0%, #0A3D0A 100%); }
-        .origin-card.peru      .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #8B1A1A 0%, #3D0608 100%); }
-        .origin-card.honduras  .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #1565C0 0%, #0A3060 100%); }
-        .origin-card.guatemala .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #4A90D9 0%, #1A3D6B 100%); }
-        .origin-card.kenya     .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #1B5E20 0%, #0A2D0E 100%); }
-        .origin-card.rwanda    .origin-stamp { background: radial-gradient(ellipse at 50% 45%, #1E88E5 0%, #0D3F6E 100%); }
+        /* Origins with real photography — landscape + pattern overlay */
+        .origin-card.vietnam   .origin-stamp { background: url('images/vietnam-landscape.jpg') center/cover no-repeat; }
+        .origin-card.colombia  .origin-stamp { background: url('images/colombia-landscape.jpg') center/cover no-repeat; }
+        .origin-card.ethiopia  .origin-stamp { background: url('images/ethiopia-landscape.jpg') center/cover no-repeat; }
+        .origin-card.brazil    .origin-stamp { background: url('images/brazil-landscape.jpg') center/cover no-repeat; }
+        .origin-card.peru      .origin-stamp { background: url('images/peru-landscape.jpg') center/cover no-repeat; }
+
+        /* All origins now have landscape imagery */
+        .origin-card.indonesia .origin-stamp { background: url('images/indonesia-landscape.jpg') center/cover no-repeat; }
+        .origin-card.honduras  .origin-stamp { background: url('images/honduras-landscape.jpg') center/cover no-repeat; }
+        .origin-card.guatemala .origin-stamp { background: url('images/guatemala-landscape.jpg') center/cover no-repeat; }
+        .origin-card.china     .origin-stamp { background: url('images/china-landscape.jpg') center/cover no-repeat; }
+        .origin-card.uganda    .origin-stamp { background: url('images/uganda-landscape.jpg') center/cover no-repeat; }
+
+        /* Pattern strip — hidden from landscape stamp */
+        .origin-card.has-pattern .origin-stamp::after {
+            display: none;
+        }
+
+        /* ── DARK TEXT AREA with visible textile pattern ── */
+        .origin-card-body {
+            background: var(--claret-dark);
+            padding: 0.9rem 1.25rem 1.1rem;
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Textile pattern as visible background in the dark text area */
+        .origin-card-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Per-country pattern backgrounds */
+        .origin-card.vietnam   .origin-card-body::before { background-image: url('images/vietnam-pattern.png'); opacity: 0.3; }
+        .origin-card.colombia  .origin-card-body::before { background-image: url('images/colombia-pattern.png'); opacity: 0.28; }
+        .origin-card.ethiopia  .origin-card-body::before { background-image: url('images/ethiopia-pattern.png'); opacity: 0.28; }
+        .origin-card.brazil    .origin-card-body::before { background-image: url('images/brazil-pattern.png'); opacity: 0.25; }
+        .origin-card.peru      .origin-card-body::before { background-image: url('images/peru-pattern.png'); opacity: 0.28; }
+        .origin-card.indonesia .origin-card-body::before { background-image: url('images/indonesia-pattern.png'); opacity: 0.28; }
+
+        /* Cards without patterns — slightly lighter dark bg */
+        .origin-card:not(.has-pattern) .origin-card-body {
+            background: var(--claret-deeper);
+        }
+
+        /* Ensure text sits above the pattern */
+        .origin-card-body > * {
+            position: relative;
+            z-index: 1;
+        }
 
         /* "Arriving" treatment — muted, not yet in stock */
         .origin-card.arriving {
@@ -1099,86 +1164,47 @@
             opacity: 0.88;
         }
 
+        /* ── COUNTRY FLAG — shown for origins without landscape photos ── */
         .origin-flag {
-            font-size: 3rem;
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+            font-size: 4rem;
+            filter: drop-shadow(0 3px 10px rgba(0,0,0,0.4));
             z-index: 1;
-            display: none; /* replaced by wax seal */
-        }
-
-        /* ── WAX SEAL — replaces emoji flags ── */
-        .origin-seal {
-            width: 80px;
-            height: 80px;
-            border: 2px solid var(--gold);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
-            background: rgba(26, 4, 8, 0.6);
-            box-shadow:
-                0 0 0 1px rgba(201, 160, 72, 0.15),
-                inset 0 0 20px rgba(201, 160, 72, 0.08),
-                0 4px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        .origin-seal::before {
-            content: '';
-            position: absolute;
-            inset: 4px;
-            border: 1px solid rgba(201, 160, 72, 0.35);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .origin-seal .seal-code {
-            font-family: var(--display-caps);
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--gold);
-            letter-spacing: 0.15em;
             line-height: 1;
         }
 
-        .origin-seal .seal-num {
-            font-family: var(--serif);
-            font-size: 0.55rem;
-            font-style: italic;
-            color: var(--gold-light);
-            opacity: 0.8;
-            margin-top: 0.2rem;
-            letter-spacing: 0.08em;
+        /* ── WAX SEAL — hidden from origin cards, now only used elsewhere ── */
+        .origin-seal {
+            display: none; /* seal removed from origin cards per feedback */
         }
 
         .origin-card h3 {
             font-family: var(--display-caps);
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 500;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--claret);
-            margin-bottom: 0.6rem;
+            color: var(--gold-light);
+            margin-bottom: 0.3rem;
         }
 
         .origin-species {
             font-family: var(--display-caps);
-            font-size: 0.58rem;
+            font-size: 0.55rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--gold-warm);
-            margin-bottom: 0.75rem;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+            opacity: 0.85;
         }
 
         .origin-flavour {
             font-family: var(--serif);
             font-style: italic;
-            color: var(--ink-soft);
-            font-size: 1rem;
-            margin-bottom: 1.25rem;
-            line-height: 1.6;
+            color: var(--ivory);
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.5;
+            opacity: 0.85;
         }
 
         .origin-link {
@@ -1186,9 +1212,9 @@
             font-size: 0.62rem;
             letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: var(--claret);
+            color: var(--gold-light);
             text-decoration: none;
-            border-bottom: 1px solid var(--gold);
+            border-bottom: 1px solid rgba(201, 160, 72, 0.5);
             padding-bottom: 0.3rem;
         }
 
@@ -1915,6 +1941,14 @@
             gap: 4rem;
         }
 
+        .footer-brand .footer-seal {
+            width: 60px;
+            height: auto;
+            opacity: 0.7;
+            margin-bottom: 1.25rem;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+        }
+
         .footer-brand .logo-word .primary { color: var(--gold-light); }
         .footer-brand .logo-word .secondary { color: var(--gold-warm); }
 
@@ -2157,18 +2191,18 @@
             border-color: var(--gold);
         }
 
-        /* Wax seal pulse on card hover */
-        .origin-card:hover .origin-seal {
-            box-shadow:
-                0 0 0 1px rgba(201, 160, 72, 0.3),
-                inset 0 0 20px rgba(201, 160, 72, 0.12),
-                0 4px 16px rgba(0, 0, 0, 0.4),
-                0 0 24px rgba(201, 160, 72, 0.15);
+        /* Card hover — subtle lift */
+        .origin-card:hover .origin-stamp {
+            box-shadow: inset 0 0 50px rgba(26,4,8,0.15);
             transition: box-shadow 0.4s ease;
         }
 
-        .origin-seal {
-            transition: box-shadow 0.4s ease;
+        .origin-card:hover .origin-flag {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .origin-flag {
+            transition: transform 0.3s ease;
         }
 
         /* Gold rule animation — draws across on reveal */
@@ -2382,7 +2416,7 @@
             .hero-inner { padding: 3rem 1.5rem; }
             .hero-text h1 { font-size: clamp(2rem, 8vw, 3rem); }
             .hero-crest { padding: 2rem 1.5rem; }
-            .crest-mono { font-size: 3.2rem; }
+            .crest-mono img { width: 90px; }
             .crest-origins { grid-template-columns: repeat(2, 1fr); font-size: 0.52rem; }
 
             /* Grids — single column */
@@ -2396,8 +2430,7 @@
             .journal-teaser { padding: 3.5rem 1.5rem; }
 
             /* Seals — slightly smaller on mobile */
-            .origin-seal { width: 68px; height: 68px; }
-            .origin-seal .seal-code { font-size: 1.1rem; }
+            .origin-flag { font-size: 3rem; }
 
             /* Contact & footer */
             .footer-content { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -2442,8 +2475,8 @@
     ═══════════════════════════════════════════════ -->
     <div class="announce-bar">
         <div class="announce-track">
-            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Née à Saigon · Now Across Asia &nbsp;&nbsp;&nbsp;</span>
-            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Née à Saigon · Now Across Asia &nbsp;&nbsp;&nbsp;</span>
+            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Conceived in Singapore · Crafted in Vietnam &nbsp;&nbsp;&nbsp;</span>
+            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Conceived in Singapore · Crafted in Vietnam &nbsp;&nbsp;&nbsp;</span>
         </div>
     </div>
 
@@ -2452,7 +2485,7 @@
     ═══════════════════════════════════════════════ -->
     <nav>
         <a href="#" class="logo">
-            <div class="logo-mark"><span>M</span></div>
+            <div class="logo-mark"><img src="images/phial-seal-sm.png" alt="Maison Des Élixirs seal" width="44" height="44"></div>
             <div class="logo-word">
                 <span class="primary">Maison Des Élixirs</span>
                 <span class="secondary">A Couture House for Coffee</span>
@@ -2478,7 +2511,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-text">
-                <p class="eyebrow">Née à Saigon · Now Across Asia</p>
+                <p class="eyebrow">Conceived in Singapore · Crafted in Vietnam</p>
                 <h1>
                     Where Coffee
                     <span class="break"><em>Meets Couture.</em></span>
@@ -2493,8 +2526,8 @@
             <!-- Crest block — replace with tin/drip-box photograph once available -->
             <div class="hero-crest">
                 <div class="crest-corners"></div>
-                <div class="crest-mono">M</div>
-                <div class="crest-est">Née à Saigon</div>
+                <div class="crest-mono"><img src="images/phial-seal.png" alt="Maison Des Élixirs phial wax seal" width="118" height="118"></div>
+                <div class="crest-est">Maison · Singapour</div>
                 <div class="crest-name">Maison Des Élixirs</div>
                 <div class="crest-tagline">Curating Artisanal Coffee</div>
                 <div class="crest-rule"></div>
@@ -2522,7 +2555,7 @@
             <p class="eyebrow">The Maison Philosophy</p>
             <h2><strong>We are not a coffee brand.</strong><br><em>We are a design house — and coffee is our artefact.</em></h2>
             <div class="divider">
-                <span class="divider-mark">◆·◆·◆</span>
+                <span class="divider-mark"><img src="images/phial-seal-sm.png" alt="" width="46" height="46"></span>
             </div>
             <p>Every bean we source, every sachet we fold, every tin we emboss begins as a question of design. Terroir becomes texture. Processing becomes palette. The box, the pouch, the phial — all drawn from the same pen. A Maison is a discipline of taste, exercised across every surface.</p>
         </div>
@@ -2578,9 +2611,8 @@
 
             <!-- FEATURE: Red PU Tin (Phuong, HCMC) — hero pack -->
             <div class="atelier-card feature">
-                <div class="slot" style="/* background: url('images/tin-red-pu.jpg') center/cover no-repeat; */">
+                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-tin.jpg') center/cover no-repeat;">
                     <span class="slot-label">N° I · The Tin</span>
-                    <div class="slot-ornament">M</div>
                 </div>
                 <div class="atelier-card-body">
                     <h4>The Red PU Tin</h4>
@@ -2590,9 +2622,8 @@
 
             <!-- Drip Bag Box -->
             <div class="atelier-card">
-                <div class="slot" style="/* background: url('images/drip-bag-box.jpg') center/cover no-repeat; */">
+                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-box.jpg') center/cover no-repeat;">
                     <span class="slot-label">N° II · The Box</span>
-                    <div class="slot-ornament">◆</div>
                 </div>
                 <div class="atelier-card-body">
                     <h4>The Drip Bag Box</h4>
@@ -2602,9 +2633,8 @@
 
             <!-- Stand-up Pouch -->
             <div class="atelier-card">
-                <div class="slot" style="/* background: url('images/stand-up-pouch.jpg') center/cover no-repeat; */">
+                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-pouch.jpg') center/cover no-repeat;">
                     <span class="slot-label">N° III · The Pouch</span>
-                    <div class="slot-ornament">✦</div>
                 </div>
                 <div class="atelier-card-body">
                     <h4>The Stand-up Pouch</h4>
@@ -2614,9 +2644,8 @@
 
             <!-- Sachets -->
             <div class="atelier-card">
-                <div class="slot" style="/* background: url('images/drip-sachet.jpg') center/cover no-repeat; */">
+                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-sachet.jpg') center/cover no-repeat;">
                     <span class="slot-label">N° IV · The Sachet</span>
-                    <div class="slot-ornament">❖</div>
                 </div>
                 <div class="atelier-card-body">
                     <h4>The Apothecary Sachet</h4>
@@ -2626,9 +2655,8 @@
 
             <!-- Gift Set -->
             <div class="atelier-card">
-                <div class="slot" style="/* background: url('images/gift-set.jpg') center/cover no-repeat; */">
+                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-cabinet.jpg') center/cover no-repeat;">
                     <span class="slot-label">N° V · The Cabinet</span>
-                    <div class="slot-ornament">⚜</div>
                 </div>
                 <div class="atelier-card-body">
                     <h4>The Origin Cabinet</h4>
@@ -2667,73 +2695,93 @@
             <p class="section-sub">Each lot travels from its farmer with a story, a stamp and a signature. Six in the Maison today — four more en route.</p>
         </div>
         <div class="origins-grid">
-            <div class="origin-card vietnam">
-                <div class="origin-stamp" data-num="N° 01"><div class="origin-seal"><span class="seal-code">VN</span><span class="seal-num">N° 01</span></div></div>
-                <h3>Vietnam</h3>
-                <p class="origin-species">Arabica · Fine Robusta</p>
-                <p class="origin-flavour">Velvety cocoa, toasted spice, a slow, rolling finish.</p>
-                <a href="#contact" class="origin-link">Request Samples →</a>
+            <div class="origin-card vietnam has-pattern">
+                <div class="origin-stamp" data-num="N° 01"></div>
+                <div class="origin-card-body">
+                    <h3>Vietnam</h3>
+                    <p class="origin-species">Arabica · Fine Robusta</p>
+                    <p class="origin-flavour">Velvety cocoa, toasted spice, a slow, rolling finish.</p>
+                    <a href="#contact" class="origin-link">Request Samples →</a>
+                </div>
             </div>
-            <div class="origin-card colombia">
-                <div class="origin-stamp" data-num="N° 02"><div class="origin-seal"><span class="seal-code">CO</span><span class="seal-num">N° 02</span></div></div>
-                <h3>Colombia</h3>
-                <p class="origin-species">Specialty Arabica</p>
-                <p class="origin-flavour">Citrus and caramel in perfect balance; clean, bright finish.</p>
-                <a href="#contact" class="origin-link">Request Samples →</a>
+            <div class="origin-card colombia has-pattern">
+                <div class="origin-stamp" data-num="N° 02"></div>
+                <div class="origin-card-body">
+                    <h3>Colombia</h3>
+                    <p class="origin-species">Specialty Arabica</p>
+                    <p class="origin-flavour">Citrus and caramel in perfect balance; clean, bright finish.</p>
+                    <a href="#contact" class="origin-link">Request Samples →</a>
+                </div>
             </div>
-            <div class="origin-card ethiopia">
-                <div class="origin-stamp" data-num="N° 03"><div class="origin-seal"><span class="seal-code">ET</span><span class="seal-num">N° 03</span></div></div>
-                <h3>Ethiopia</h3>
-                <p class="origin-species">Heirloom Arabica</p>
-                <p class="origin-flavour">Jasmine, bergamot, stone fruit — the birthplace of coffee.</p>
-                <a href="#contact" class="origin-link">Request Samples →</a>
+            <div class="origin-card ethiopia has-pattern">
+                <div class="origin-stamp" data-num="N° 03"></div>
+                <div class="origin-card-body">
+                    <h3>Ethiopia</h3>
+                    <p class="origin-species">Heirloom Arabica</p>
+                    <p class="origin-flavour">Jasmine, bergamot, stone fruit — the birthplace of coffee.</p>
+                    <a href="#contact" class="origin-link">Request Samples →</a>
+                </div>
             </div>
-            <div class="origin-card indonesia">
-                <div class="origin-stamp" data-num="N° 04"><div class="origin-seal"><span class="seal-code">ID</span><span class="seal-num">N° 04</span></div></div>
-                <h3>Indonesia</h3>
-                <p class="origin-species">Arabica · Robusta</p>
-                <p class="origin-flavour">Earthy, cocoa-deep, syrupy body. A cup with weight.</p>
-                <a href="#contact" class="origin-link">Request Samples →</a>
+            <div class="origin-card indonesia has-pattern">
+                <div class="origin-stamp" data-num="N° 04"></div>
+                <div class="origin-card-body">
+                    <h3>Indonesia</h3>
+                    <p class="origin-species">Arabica · Robusta</p>
+                    <p class="origin-flavour">Earthy, cocoa-deep, syrupy body. A cup with weight.</p>
+                    <a href="#contact" class="origin-link">Request Samples →</a>
+                </div>
             </div>
-            <div class="origin-card brazil">
-                <div class="origin-stamp" data-num="N° 05"><div class="origin-seal"><span class="seal-code">BR</span><span class="seal-num">N° 05</span></div></div>
-                <h3>Brazil</h3>
-                <p class="origin-species">Specialty Arabica</p>
-                <p class="origin-flavour">Nutty, dark chocolate, low acidity — quiet confidence.</p>
-                <a href="#contact" class="origin-link">Request Samples →</a>
+            <div class="origin-card brazil has-pattern">
+                <div class="origin-stamp" data-num="N° 05"></div>
+                <div class="origin-card-body">
+                    <h3>Brazil</h3>
+                    <p class="origin-species">Specialty Arabica</p>
+                    <p class="origin-flavour">Nutty, dark chocolate, low acidity — quiet confidence.</p>
+                    <a href="#contact" class="origin-link">Request Samples →</a>
+                </div>
             </div>
-            <div class="origin-card peru">
-                <div class="origin-stamp" data-num="N° 06"><div class="origin-seal"><span class="seal-code">PE</span><span class="seal-num">N° 06</span></div></div>
-                <h3>Peru</h3>
-                <p class="origin-species">Organic Arabica</p>
-                <p class="origin-flavour">Bright fruit, delicate florals, a clean and honest finish.</p>
-                <a href="#contact" class="origin-link">Request Samples →</a>
+            <div class="origin-card peru has-pattern">
+                <div class="origin-stamp" data-num="N° 06"></div>
+                <div class="origin-card-body">
+                    <h3>Peru</h3>
+                    <p class="origin-species">Organic Arabica</p>
+                    <p class="origin-flavour">Bright fruit, delicate florals, a clean and honest finish.</p>
+                    <a href="#contact" class="origin-link">Request Samples →</a>
+                </div>
             </div>
 
             <!-- ── ARRIVING ORIGINS ── -->
             <div class="origin-card honduras arriving">
-                <div class="origin-stamp" data-num="N° 07"><div class="origin-seal"><span class="seal-code">HN</span><span class="seal-num">N° 07</span></div></div>
-                <h3>Honduras</h3>
-                <p class="origin-species">Specialty Arabica</p>
-                <p class="origin-flavour">Toffee, red apple, honey — a rising star of Central American lots.</p>
+                <div class="origin-stamp" data-num="N° 07"></div>
+                <div class="origin-card-body">
+                    <h3>Honduras</h3>
+                    <p class="origin-species">Specialty Arabica</p>
+                    <p class="origin-flavour">Toffee, red apple, honey — a rising star of Central American lots.</p>
+                </div>
             </div>
             <div class="origin-card guatemala arriving">
-                <div class="origin-stamp" data-num="N° 08"><div class="origin-seal"><span class="seal-code">GT</span><span class="seal-num">N° 08</span></div></div>
-                <h3>Guatemala</h3>
-                <p class="origin-species">SHB Arabica</p>
-                <p class="origin-flavour">Cocoa, spice, orange peel — volcanic terroir, lingering finish.</p>
+                <div class="origin-stamp" data-num="N° 08"></div>
+                <div class="origin-card-body">
+                    <h3>Guatemala</h3>
+                    <p class="origin-species">SHB Arabica</p>
+                    <p class="origin-flavour">Cocoa, spice, orange peel — volcanic terroir, lingering finish.</p>
+                </div>
             </div>
-            <div class="origin-card kenya arriving">
-                <div class="origin-stamp" data-num="N° 09"><div class="origin-seal"><span class="seal-code">KE</span><span class="seal-num">N° 09</span></div></div>
-                <h3>Kenya</h3>
-                <p class="origin-species">AA Arabica</p>
-                <p class="origin-flavour">Blackcurrant, tomato brightness, juicy acidity — the connoisseur's origin.</p>
+            <div class="origin-card china arriving">
+                <div class="origin-stamp" data-num="N° 09"></div>
+                <div class="origin-card-body">
+                    <h3>China</h3>
+                    <p class="origin-species">Yunnan Arabica</p>
+                    <p class="origin-flavour">Brown sugar, dried plum, walnut — Yunnan's quiet revelation.</p>
+                </div>
             </div>
-            <div class="origin-card rwanda arriving">
-                <div class="origin-stamp" data-num="N° 10"><div class="origin-seal"><span class="seal-code">RW</span><span class="seal-num">N° 10</span></div></div>
-                <h3>Rwanda</h3>
-                <p class="origin-species">Bourbon Arabica</p>
-                <p class="origin-flavour">Stone fruit, floral complexity, silky body — the jewel of East Africa.</p>
+            <div class="origin-card uganda arriving">
+                <div class="origin-stamp" data-num="N° 10"></div>
+                <div class="origin-card-body">
+                    <h3>Uganda</h3>
+                    <p class="origin-species">Arabica · Robusta</p>
+                    <p class="origin-flavour">Chocolate malt, cherry, full body — Africa's hidden powerhouse.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -2960,24 +3008,24 @@
         <div class="section-head">
             <p class="eyebrow">The Maison · Across Asia</p>
             <h2>Where <em>We Are</em></h2>
-            <p class="section-sub">Born in Saigon, now serving discerning houses from Ho Chi Minh City to New Delhi. Each market receives the same obsessive curation — adapted to local compliance, delivered with Maison finesse.</p>
+            <p class="section-sub">Conceived in Singapore, crafted in Vietnam, and carried across Asia. The idea was born at our Singapore home; the coffee, the design and the craft are made in Saigon; the first market is India — each receiving the same obsessive curation, delivered with Maison finesse.</p>
         </div>
 
         <div class="india-grid">
             <div class="india-card">
                 <span class="india-num">N° 01</span>
-                <h4>Vietnam · The Birthplace</h4>
-                <p>Our sourcing house in Ho Chi Minh City. Direct relationships with farms across the Central Highlands. Retail through select partners in HCMC and Phu Quoc.</p>
+                <h4>Singapore · The Home</h4>
+                <p>Where the Maison was conceived. Our headquarters and creative direction — fifteen years in the making — where every collection begins as an idea before it ever becomes an object.</p>
             </div>
             <div class="india-card">
                 <span class="india-num">N° 02</span>
-                <h4>India · The New Chapter</h4>
-                <p>Full GST invoicing, FSSAI labelling and pan-India supply from our Gurgaon house. Sample kits dispatched within 48–72 hours.</p>
+                <h4>Vietnam · The Atelier</h4>
+                <p>Our house in Ho Chi Minh City, where the work is made: sourcing direct from the Central Highlands, plus our design and development studio. The hands behind every cup and every package.</p>
             </div>
             <div class="india-card">
                 <span class="india-num">N° 03</span>
-                <h4>Singapore · Arriving Soon</h4>
-                <p>A Southeast Asian hub for the Maison's trade across the region. Entity forming — enquiries welcome.</p>
+                <h4>India · The First Market</h4>
+                <p>Full GST invoicing, FSSAI labelling and pan-India supply from our Gurgaon house. Sample kits dispatched within 48–72 hours.</p>
             </div>
             <div class="india-card">
                 <span class="india-num">N° 04</span>
@@ -2995,7 +3043,7 @@
             <div class="contact-info reveal">
                 <p class="eyebrow align-left">Enter the Maison</p>
                 <h2>Request <em>Samples</em></h2>
-                <p>We answer in 24–48 hours. Samples dispatched the same week. Serving India, Vietnam and Singapore with full local compliance.</p>
+                <p>We answer in 24–48 hours. Samples dispatched the same week. A Singapore house, crafted in Vietnam, serving India and Asia with full local compliance.</p>
 
                 <div class="contact-methods">
                     <div class="contact-method">
@@ -3018,8 +3066,8 @@
                         <div class="contact-icon">M</div>
                         <div>
                             <h4>The Maison</h4>
-                            <a href="#" style="cursor:default">Saigon · Gurgaon · Singapore</a>
-                            <p>Maison Des Élixirs — Née à Saigon, now across Asia</p>
+                            <a href="#" style="cursor:default">Singapore · Saigon · Gurgaon</a>
+                            <p>Maison Des Élixirs — Conceived in Singapore, crafted in Vietnam</p>
                         </div>
                     </div>
                 </div>
@@ -3084,13 +3132,14 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
+                <img src="images/phial-seal.png" alt="Maison Des Élixirs seal" class="footer-seal" width="58" height="58">
                 <div class="logo-word">
                     <span class="primary" style="font-family:var(--serif);font-style:italic;font-size:1.6rem;">Maison Des Élixirs</span>
                     <span class="secondary" style="font-family:var(--display-caps);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;">A Couture House for Coffee</span>
                 </div>
-                <p>A couture house for coffee.<br>Born in Saigon. Now across Asia.</p>
+                <p>A couture house for coffee.<br>Conceived in Singapore. Crafted in Vietnam.</p>
                 <div class="address">
-                    Saigon · Gurgaon · Singapore<br>
+                    Singapore · Saigon · Gurgaon<br>
                     White / private-label available · Trade terms by arrangement<br><br>
                     <span style="font-size:0.72rem;opacity:0.55;">India operations: Caphe Elixir Private Limited · GSTIN 06AALCC9937A1ZL · Palam Vihar, Gurgaon 122017</span>
                 </div>
@@ -3117,7 +3166,7 @@
         </div>
         <div class="footer-bottom">
             <span>© MMXXVI · Caphe Elixir Private Limited</span>
-            <span>Née à Saigon · Saigon · Gurgaon · Singapore</span>
+            <span>Conceived in Singapore · Crafted in Vietnam · Singapore · Saigon · Gurgaon</span>
         </div>
     </footer>
 
@@ -3195,4 +3244,3 @@
     </script>
 </body>
 </html>
-Add La Boutique + trust blocks + Codex refinements
