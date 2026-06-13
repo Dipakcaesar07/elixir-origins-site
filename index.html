@@ -17,6 +17,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.capheelixir.com/">
     <meta property="og:image" content="https://www.capheelixir.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Maison Des Élixirs — A Couture House for Coffee">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Maison Des Élixirs">
 
@@ -24,6 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Maison Des Élixirs · A Couture House for Coffee">
     <meta name="twitter:description" content="Where coffee meets couture. Ten origins curated as artefacts of taste.">
+    <meta name="twitter:image" content="https://www.capheelixir.com/og-image.jpg">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -920,11 +924,8 @@
             position: relative;
             background: var(--claret-dark);
             border: 1px solid rgba(201, 160, 72, 0.22);
-            padding: 1.75rem;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            aspect-ratio: 4 / 5;
             overflow: hidden;
             transition: border-color 0.35s;
         }
@@ -932,56 +933,55 @@
         .atelier-card.feature {
             grid-column: 1;
             grid-row: 1 / 3;
-            aspect-ratio: auto;
         }
 
         .atelier-card:hover {
             border-color: var(--gold);
         }
 
-        /* Image slot — replace background-image with real photo */
+        /* Image slot — product portrait on an ivory plate, contained (not cropped) */
         .atelier-card .slot {
-            position: absolute;
-            inset: 0;
-            /* Replace with: background: url('images/tin-red-pu.jpg') center/cover no-repeat; */
-            background:
-                linear-gradient(180deg, rgba(26,4,8,0) 40%, rgba(26,4,8,0.92) 100%),
-                radial-gradient(ellipse at 50% 35%, rgba(201,160,72,0.14) 0%, transparent 55%),
-                linear-gradient(160deg, #6B1220 0%, #3A060F 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.6rem;
+            aspect-ratio: 4 / 3;
+            background: linear-gradient(155deg, #F7EFDD 0%, #EFE3C6 100%);
+            border-bottom: 1px solid rgba(201, 160, 72, 0.28);
+        }
+
+        .atelier-card .slot img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            background: #FBF6EA;
+            border: 1px solid rgba(201, 160, 72, 0.55);
+            box-shadow: 0 12px 28px rgba(36, 2, 8, 0.22);
+        }
+
+        /* Feature slot grows to fill the two-row span */
+        .atelier-card.feature .slot {
+            aspect-ratio: auto;
+            flex: 1 1 auto;
+            min-height: 360px;
         }
 
         .atelier-card .slot-label {
-            position: absolute;
-            top: 1.25rem;
-            left: 1.25rem;
+            display: block;
             font-family: var(--display-caps);
-            font-size: 0.58rem;
+            font-size: 0.56rem;
             letter-spacing: 0.25em;
             text-transform: uppercase;
             color: var(--gold);
-            background: rgba(26, 4, 8, 0.6);
-            padding: 0.35rem 0.75rem;
-            border: 1px solid var(--gold-faint);
+            margin-bottom: 0.5rem;
         }
-
-        .atelier-card .slot-ornament {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: var(--serif);
-            font-style: italic;
-            font-size: 5rem;
-            color: var(--gold);
-            opacity: 0.35;
-            line-height: 1;
-        }
-
-        .atelier-card.feature .slot-ornament { font-size: 9rem; }
 
         .atelier-card-body {
             position: relative;
             z-index: 2;
+            padding: 1.25rem 1.5rem 1.5rem;
+            background: var(--claret-dark);
         }
 
         .atelier-card h4 {
@@ -2369,8 +2369,8 @@
             .atelier-card.feature {
                 grid-column: 1 / -1;
                 grid-row: 1;
-                aspect-ratio: 16 / 9;
             }
+            .atelier-card.feature .slot { aspect-ratio: 16 / 9; flex: none; min-height: 0; }
             .journal-inner { gap: 2.5rem; }
         }
 
@@ -2422,7 +2422,7 @@
             /* Grids — single column */
             .origins-grid, .formats-grid, .india-grid, .boutique-grid { grid-template-columns: 1fr; }
             .atelier-grid { grid-template-columns: 1fr; }
-            .atelier-card.feature { aspect-ratio: 4 / 3; }
+            .atelier-card.feature .slot { aspect-ratio: 4 / 3; flex: none; min-height: 0; }
 
             /* Journal teaser */
             .journal-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -2475,8 +2475,8 @@
     ═══════════════════════════════════════════════ -->
     <div class="announce-bar">
         <div class="announce-track">
-            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Conceived in Singapore · Crafted in Vietnam &nbsp;&nbsp;&nbsp;</span>
-            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Conceived in Singapore · Crafted in Vietnam &nbsp;&nbsp;&nbsp;</span>
+            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Curating Artisanal Coffee &nbsp;&nbsp;&nbsp;</span>
+            <span><strong>Maison Des Élixirs</strong> <span class="sep">◆</span> A Couture House for Coffee <span class="sep">◆</span> Ten Origins Curated <span class="sep">◆</span> Order via WhatsApp <span class="sep">◆</span> Curating Artisanal Coffee &nbsp;&nbsp;&nbsp;</span>
         </div>
     </div>
 
@@ -2511,7 +2511,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-text">
-                <p class="eyebrow">Conceived in Singapore · Crafted in Vietnam</p>
+                <p class="eyebrow">Conceived in Singapore. Crafted in Vietnam. Served across Asia.</p>
                 <h1>
                     Where Coffee
                     <span class="break"><em>Meets Couture.</em></span>
@@ -2611,10 +2611,9 @@
 
             <!-- FEATURE: Red PU Tin (Phuong, HCMC) — hero pack -->
             <div class="atelier-card feature">
-                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-tin.jpg') center/cover no-repeat;">
-                    <span class="slot-label">N° I · The Tin</span>
-                </div>
+                <div class="slot"><img src="images/pack-tin.jpg" alt="Maison Des Élixirs red embossed coffee tin" loading="lazy"></div>
                 <div class="atelier-card-body">
+                    <span class="slot-label">N° I · The Tin</span>
                     <h4>The Red PU Tin</h4>
                     <p>Hand-lacquered in Ho Chi Minh City · Embossed gold crest · Edition of 500</p>
                 </div>
@@ -2622,10 +2621,9 @@
 
             <!-- Drip Bag Box -->
             <div class="atelier-card">
-                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-box.jpg') center/cover no-repeat;">
-                    <span class="slot-label">N° II · The Box</span>
-                </div>
+                <div class="slot"><img src="images/pack-box.jpg" alt="Maison Des Élixirs Colombia drip-bag box" loading="lazy"></div>
                 <div class="atelier-card-body">
+                    <span class="slot-label">N° II · The Box</span>
                     <h4>The Drip Bag Box</h4>
                     <p>10 × 12g sachets · Origin-stamped</p>
                 </div>
@@ -2633,10 +2631,9 @@
 
             <!-- Stand-up Pouch -->
             <div class="atelier-card">
-                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-pouch.jpg') center/cover no-repeat;">
-                    <span class="slot-label">N° III · The Pouch</span>
-                </div>
+                <div class="slot"><img src="images/pack-pouch.jpg" alt="Maison Des Élixirs Vietnam apothecary stand-up pouch" loading="lazy"></div>
                 <div class="atelier-card-body">
+                    <span class="slot-label">N° III · The Pouch</span>
                     <h4>The Stand-up Pouch</h4>
                     <p>227g whole bean · Apothecary stamp</p>
                 </div>
@@ -2644,10 +2641,9 @@
 
             <!-- Sachets -->
             <div class="atelier-card">
-                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-sachet.jpg') center/cover no-repeat;">
-                    <span class="slot-label">N° IV · The Sachet</span>
-                </div>
+                <div class="slot"><img src="images/pack-sachet.jpg" alt="Maison Des Élixirs Peru drip box with single-serve sachet" loading="lazy"></div>
                 <div class="atelier-card-body">
+                    <span class="slot-label">N° IV · The Sachet</span>
                     <h4>The Apothecary Sachet</h4>
                     <p>Single-serve phial · Nitrogen-sealed</p>
                 </div>
@@ -2655,10 +2651,9 @@
 
             <!-- Gift Set -->
             <div class="atelier-card">
-                <div class="slot" style="background: linear-gradient(180deg, rgba(26,4,8,0) 48%, rgba(26,4,8,0.82) 100%), url('images/pack-cabinet.jpg') center/cover no-repeat;">
-                    <span class="slot-label">N° V · The Cabinet</span>
-                </div>
+                <div class="slot"><img src="images/pack-cabinet.jpg" alt="Maison Des Élixirs gift box open, revealing sachets" loading="lazy"></div>
                 <div class="atelier-card-body">
+                    <span class="slot-label">N° V · The Cabinet</span>
                     <h4>The Origin Cabinet</h4>
                     <p>Curated gift edition · All ten origins</p>
                 </div>
@@ -3008,7 +3003,7 @@
         <div class="section-head">
             <p class="eyebrow">The Maison · Across Asia</p>
             <h2>Where <em>We Are</em></h2>
-            <p class="section-sub">Conceived in Singapore, crafted in Vietnam, and carried across Asia. The idea was born at our Singapore home; the coffee, the design and the craft are made in Saigon; the first market is India — each receiving the same obsessive curation, delivered with Maison finesse.</p>
+            <p class="section-sub">Conceived in Singapore. Crafted in Vietnam. Served across Asia. The idea began at our Singapore home; the coffee, design and craft are made in Saigon; India is our first market — each receiving the same obsessive curation, delivered with Maison finesse.</p>
         </div>
 
         <div class="india-grid">
@@ -3043,7 +3038,7 @@
             <div class="contact-info reveal">
                 <p class="eyebrow align-left">Enter the Maison</p>
                 <h2>Request <em>Samples</em></h2>
-                <p>We answer in 24–48 hours. Samples dispatched the same week. A Singapore house, crafted in Vietnam, serving India and Asia with full local compliance.</p>
+                <p>We answer in 24–48 hours. Samples dispatched the same week, with full local compliance across our markets.</p>
 
                 <div class="contact-methods">
                     <div class="contact-method">
@@ -3067,7 +3062,7 @@
                         <div>
                             <h4>The Maison</h4>
                             <a href="#" style="cursor:default">Singapore · Saigon · Gurgaon</a>
-                            <p>Maison Des Élixirs — Conceived in Singapore, crafted in Vietnam</p>
+                            <p>Maison Des Élixirs — Curating Artisanal Coffee</p>
                         </div>
                     </div>
                 </div>
@@ -3137,7 +3132,7 @@
                     <span class="primary" style="font-family:var(--serif);font-style:italic;font-size:1.6rem;">Maison Des Élixirs</span>
                     <span class="secondary" style="font-family:var(--display-caps);font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;">A Couture House for Coffee</span>
                 </div>
-                <p>A couture house for coffee.<br>Conceived in Singapore. Crafted in Vietnam.</p>
+                <p>A couture house for coffee.<br>Conceived in Singapore. Crafted in Vietnam. Served across Asia.</p>
                 <div class="address">
                     Singapore · Saigon · Gurgaon<br>
                     White / private-label available · Trade terms by arrangement<br><br>
@@ -3166,7 +3161,7 @@
         </div>
         <div class="footer-bottom">
             <span>© MMXXVI · Caphe Elixir Private Limited</span>
-            <span>Conceived in Singapore · Crafted in Vietnam · Singapore · Saigon · Gurgaon</span>
+            <span>Singapore · Saigon · Gurgaon</span>
         </div>
     </footer>
 
