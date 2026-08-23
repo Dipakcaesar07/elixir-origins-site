@@ -3237,5 +3237,120 @@
             }
         }, { passive: true });
     </script>
+
+    <!-- ═══════════ MAISON ANALYTICS — privacy-first, no PII ═══════════
+         Layer 1: Vercel Web Analytics (enable toggle in Vercel dashboard)
+         Layer 2: Google Analytics 4 (paste your G-XXXXXXX ID below to activate)
+         Privacy: no raw IPs stored, no form contents, no names/phones/emails,
+         no WhatsApp message text. Geography is aggregate-only (GA4/Vercel default). -->
+    <script>
+        window.va = window.va || function(){ (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        // ── CONFIG ──
+        var GA4_ID = ''; // ← paste GA4 Measurement ID (G-XXXXXXXXXX) here to enable GA4
+
+        // ── GA4 loader (only if ID is set) ──
+        if (GA4_ID) {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){ dataLayer.push(arguments); };
+            gtag('js', new Date());
+            gtag('config', GA4_ID, { anonymize_ip: true, allow_google_signals: false });
+        }
+
+        // ── UTM capture (source attribution: instagram / whatsapp / linkedin / google / direct) ──
+        var qs = new URLSearchParams(location.search);
+        var utm = {};
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+            if (qs.get(k)) utm[k] = qs.get(k).slice(0, 60);
+        });
+
+        // ── Unified event dispatcher (GA4 + Vercel custom events) ──
+        function track(name, params) {
+            var p = Object.assign({}, utm, params || {});
+            try { if (window.gtag) gtag('event', name, p); } catch (e) {}
+            try { if (window.va) va('event', { name: name, data: p }); } catch (e) {}
+        }
+
+        // ── SECTION VIEWS — IntersectionObserver, fires once per section per visit ──
+        var sections = [
+            ['section_view_hero', document.querySelector('.hero')],
+            ['section_view_atelier', document.getElementById('atelier')],
+            ['section_view_origins', document.getElementById('origins')],
+            ['section_view_boutique', document.getElementById('boutique')],
+            ['section_view_contact', document.getElementById('contact')]
+        ];
+        if ('IntersectionObserver' in window) {
+            var seen = {};
+            var sectionObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting && !seen[entry.target._evName]) {
+                        seen[entry.target._evName] = true;
+                        track(entry.target._evName);
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.25 });
+            sections.forEach(function (pair) {
+                if (pair[1]) { pair[1]._evName = pair[0]; sectionObserver.observe(pair[1]); }
+            });
+        }
+
+        // ── CLICK TRACKING — delegated, covers all CTAs incl. mobile taps ──
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest ? e.target.closest('a') : null;
+            if (!a) return;
+            var href = a.getAttribute('href') || '';
+
+            // Payment links (Razorpay etc.)
+            if (/razorpay|rzp\.io/i.test(href)) {
+                track('payment_link_click');
+                return;
+            }
+
+            // WhatsApp CTAs
+            if (href.indexOf('wa.me') !== -1) {
+                var card = a.closest('.boutique-card');
+                if (card) {
+                    var h3 = card.querySelector('h3');
+                    var product = h3 ? h3.textContent.trim().slice(0, 50) : 'unknown';
+                    var isReserve = /reserve/i.test(a.textContent);
+                    track(isReserve ? 'click_reserve_product' : 'click_acquire_product', { product: product });
+                } else {
+                    track('click_whatsapp_order', {
+                        placement: a.classList.contains('whatsapp-float') ? 'floating_button' : 'inline'
+                    });
+                }
+                return;
+            }
+
+            // Request Samples / contact CTAs
+            if (href === '#contact') {
+                var label = a.textContent.trim().slice(0, 40) || 'contact_link';
+                track('click_request_samples', { cta: label });
+            }
+        }, { passive: true });
+
+        // ── FORM TRACKING — start + submit only, never field contents ──
+        var form = document.querySelector('form[action*="formspree"]');
+        if (form) {
+            var formStarted = false;
+            form.addEventListener('focusin', function () {
+                if (!formStarted) { formStarted = true; track('form_start'); }
+            });
+            form.addEventListener('submit', function () {
+                track('form_submit_success', { transport_type: 'beacon' });
+            });
+        }
+    })();
+    </script>
 </body>
 </html>
